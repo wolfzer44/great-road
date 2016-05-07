@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="usa">
+  <head>
+    <meta charset="utf-8">
+    <title>Great Road</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+    <header id="header">
+        <div class="container">
+          <div class="logomarca">
+            <img src="assets/imgs/logomarca.png" alt="" />
+          </div>
+
+          <div class="menu">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a ui-sref="services">services</a></li>
+              <li><a ui-sref="about-us">about us</a></li>
+              <li><a ui-sref="inspection-state">Inspection State</a></li>
+              <li><a ui-sref="question-and-answers">questions and answers</a></li>
+              <!-- <li><a href="#">contact us</a></li> -->
+            </ul>
+          </div>
+        </div>
+    </header>
+
+
+    <div ui-view></div>
+
+
+    <footer id="footer">
+      <center>
+        <span>
+          368 Great rd. Stow, MA 01775/Junction 117 & Rt.62
+          <br>
+          <phone>
+            978-897-6902 / 978-897-1733
+          </phone>
+        </span>
+      </center>
+    </footer>
+
+    <script src="assets/lib/angular/angular.min.js"></script>
+    <script src="assets/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+    <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="assets/lib/angular-carousel/dist/angular-carousel.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/services-home/services.js"></script>
+    <script src="assets/js/home.controller.js"></script>
+    <script src="assets/js/services.controller.js"></script>
+  </body>
+</html>
