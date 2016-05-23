@@ -48,12 +48,24 @@ body {
   font-size: 22px;
 }
 .logomarca {
-  margin-top: 10px;
+  margin-top: 0px;
+  width: 200px;
+  background: #011627;
+  height: 150px;
+  position: absolute;
+  left: 20px;
+  z-index: 99;
+}
+.logomarca img {
+  width: 150px;
+  position: relative;
+  left: 25px;
+  top: 32px;
 }
 .menu {
-  width: 800px;
+  width: 850px;
   float: right;
-  margin-top: -65px;
+  margin-top: 25px;
   font-family: 'Open Sans', sans-serif;
 }
 .menu ul li {
@@ -306,3 +318,4 @@ body {
   border-radius: 50%;
   padding: 5px;
 }
+.angular-google-map-container { height: 400px; }

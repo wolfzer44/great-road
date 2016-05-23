@@ -2,9 +2,15 @@
   'use strict';
 
   angular
-    .module('usa', ['controllers','ui.router'])
+    .module('usa', ['controllers','ui.router', 'uiGmapgoogle-maps'])
     .run(run)
-    .config(router);
+    .config(router).config(
+        ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
+            GoogleMapApiProviders.configure({
+                china: true
+            });
+        }]
+    );
 
     run.$inject = ['$log', '$rootScope'];
 
@@ -31,6 +37,7 @@
           })
       })
     }
+
 
     router.$inject = ['$urlRouterProvider', '$stateProvider']
     function router($urlRouterProvider, $stateProvider) {
@@ -64,6 +71,12 @@
           url: "/question-and-answers",
           templateUrl: "../views/question.view.html",
           controller: "servicesCtrl"
+        })
+
+        .state('contact-us', {
+          url: "/contact-us",
+          templateUrl: "../views/contact.view.html",
+          controller: "contactCtrl"
         })
 
     }
